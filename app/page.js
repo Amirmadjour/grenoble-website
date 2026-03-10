@@ -1,65 +1,70 @@
-import Image from "next/image";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import IntroSection from "./components/IntroSection";
+import StorySection from "./components/StorySection";
+import Footer from "./components/Footer";
+
+const stories = [
+  {
+    id: "mountains",
+    imageSrc: "/Mountains-around-grenoble.jpg",
+    imageAlt:
+      "The majestic mountain ranges surrounding Grenoble, with snow-capped peaks under a clear sky",
+    title: "Surrounded by Giants",
+    subtitle: "Chapter I — The Mountains",
+    description:
+      "Grenoble sits at the confluence of three mountain ranges — the Chartreuse, Vercors, and Belledonne. These towering peaks create a natural amphitheatre of breathtaking beauty that changes with every season. In winter, they wear a pristine coat of snow; in summer, they glow emerald green under the warm Alpine sun. There are few cities in the world where you can stand in the heart of an urban centre and feel so utterly enveloped by nature's grandest architecture.",
+    reverse: false,
+  },
+  {
+    id: "bastille",
+    imageSrc: "/Grenoble-Bastille cable car.jpg",
+    imageAlt:
+      "The iconic Grenoble-Bastille cable car ascending above the city rooftops toward the Bastille fort",
+    title: "Rising Above the City",
+    subtitle: "Chapter II — The Bastille Cable Car",
+    description:
+      "Since 1934, the Grenoble-Bastille cable car — affectionately known as \"Les Bulles\" (the bubbles) — has carried visitors up to the Bastille fortress, 476 meters above the city. The transparent spherical cabins offer a spellbinding panoramic view as you glide over the Isère River and the old town rooftops. At the summit, the panorama unfolds in all directions: the distant Mont Blanc, the winding river, and the terracotta rooftops of the city below. It is a ride that transforms perspective — literally and figuratively.",
+    reverse: true,
+  },
+  {
+    id: "cycling",
+    imageSrc: "/cycling-in-grenoble.jpg",
+    imageAlt:
+      "Cyclists enjoying one of Grenoble's many dedicated cycling paths through the city",
+    title: "A City on Two Wheels",
+    subtitle: "Chapter III — The Cycling Culture",
+    description:
+      "Grenoble is consistently ranked among France's most cycling-friendly cities — and it's easy to see why. With over 320 kilometres of dedicated cycling paths weaving through the city and into the surrounding valleys, biking here is not just a mode of transport; it is a way of life. From students pedalling to university along the Isère to weekend adventurers tackling legendary Alpine cols, the bicycle is woven into the very identity of Grenoble. The flat city centre and the Métrovélo bike-sharing system make it effortless for anyone to join in.",
+    reverse: false,
+  },
+  {
+    id: "avenue",
+    imageSrc: "/longest-avenue-in-france.webp",
+    imageAlt:
+      "The grand Cours Jean Jaurès, the longest avenue in France, lined with trees stretching toward the mountains",
+    title: "The Longest Avenue in France",
+    subtitle: "Chapter IV — Cours Jean Jaurès",
+    description:
+      "Stretching an impressive 3.5 kilometres through the heart of the city, Cours Jean Jaurès holds the distinction of being the longest straight avenue in all of France. Lined with elegant plane trees and flanked by charming cafés, this grand boulevard connects the train station to the old city, serving as Grenoble's monumental spine. Walking down this avenue at sunset, with the golden light filtering through the canopy and the silhouettes of the Alps framing the horizon, is one of those simple yet unforgettable Grenoble moments.",
+    reverse: true,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main>
+      <Navbar />
+      <HeroSection />
+      <IntroSection />
+      {stories.map((story, index) => (
+        <StorySection
+          key={story.id}
+          {...story}
+          index={index}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      ))}
+      <Footer />
+    </main>
   );
 }
