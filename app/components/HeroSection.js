@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -25,7 +27,7 @@ export default function HeroSection() {
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
         <Image
-          src="/hero-image.webp"
+          src={`${basePath}/hero-image.webp`}
           alt="Panoramic view of Grenoble nestled among the Alps"
           fill
           priority

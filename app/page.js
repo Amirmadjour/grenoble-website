@@ -4,10 +4,12 @@ import IntroSection from "./components/IntroSection";
 import StorySection from "./components/StorySection";
 import Footer from "./components/Footer";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const stories = [
   {
     id: "mountains",
-    imageSrc: "/Mountains-around-grenoble.jpg",
+    imageSrc: `${basePath}/Mountains-around-grenoble.jpg`,
     imageAlt:
       "The majestic mountain ranges surrounding Grenoble, with snow-capped peaks under a clear sky",
     title: "Surrounded by Giants",
@@ -18,7 +20,7 @@ const stories = [
   },
   {
     id: "bastille",
-    imageSrc: "/Grenoble-Bastille cable car.jpg",
+    imageSrc: `${basePath}/Grenoble-Bastille cable car.jpg`,
     imageAlt:
       "The iconic Grenoble-Bastille cable car ascending above the city rooftops toward the Bastille fort",
     title: "Rising Above the City",
@@ -29,7 +31,7 @@ const stories = [
   },
   {
     id: "cycling",
-    imageSrc: "/cycling-in-grenoble.jpg",
+    imageSrc: `${basePath}/cycling-in-grenoble.jpg`,
     imageAlt:
       "Cyclists enjoying one of Grenoble's many dedicated cycling paths through the city",
     title: "A City on Two Wheels",
@@ -40,7 +42,7 @@ const stories = [
   },
   {
     id: "avenue",
-    imageSrc: "/longest-avenue-in-france.webp",
+    imageSrc: `${basePath}/longest-avenue-in-france.webp`,
     imageAlt:
       "The grand Cours Jean Jaurès, the longest avenue in France, lined with trees stretching toward the mountains",
     title: "The Longest Avenue in France",
