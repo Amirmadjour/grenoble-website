@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="story-section relative h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image with Parallax */}
       <div
@@ -35,6 +35,9 @@ export default function HeroSection() {
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(12,18,32,0.4)] via-[rgba(12,18,32,0.3)] to-[rgba(12,18,32,0.95)]" />
       </div>
+
+      {/* Bottom gradient for seamless transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-midnight)] to-transparent z-20 pointer-events-none" />
 
       {/* Decorative elements */}
       <div className="absolute top-8 left-8 z-10 flex items-center gap-3 opacity-80">
@@ -64,8 +67,8 @@ export default function HeroSection() {
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <p
           className={`text-sm md:text-base tracking-[0.35em] uppercase text-[var(--color-golden)] mb-6 transition-all duration-1000 ${loaded
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-8"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
             }`}
           style={{ fontFamily: "var(--font-inter)", transitionDelay: "0.3s" }}
         >
@@ -74,8 +77,8 @@ export default function HeroSection() {
 
         <h1
           className={`text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] mb-8 transition-all duration-1000 ${loaded
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-12"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-12"
             }`}
           style={{
             fontFamily: "var(--font-playfair)",
@@ -93,8 +96,8 @@ export default function HeroSection() {
 
         <p
           className={`text-base md:text-lg max-w-2xl mx-auto text-[var(--color-soft-gray)] leading-relaxed transition-all duration-1000 ${loaded
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-6"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-6"
             }`}
           style={{
             fontFamily: "var(--font-inter)",

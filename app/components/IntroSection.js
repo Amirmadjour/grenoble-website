@@ -8,32 +8,42 @@ export default function IntroSection() {
   return (
     <section
       ref={ref}
-      className="relative py-28 md:py-40 overflow-hidden"
+      className="story-section relative h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(ellipse at center, var(--color-deep-blue) 0%, var(--color-midnight) 100%)",
+      }}
     >
-      {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Decorative background glow */}
+      <div className="absolute inset-0 opacity-8 pointer-events-none">
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, var(--color-golden) 0%, transparent 70%)",
+              "radial-gradient(circle, var(--color-golden) 0%, transparent 60%)",
           }}
         />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-midnight)] to-transparent z-10 pointer-events-none" />
+
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[var(--color-midnight)] to-transparent z-10 pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
         {/* Decorative top element */}
         <div
-          className={`flex items-center justify-center gap-4 mb-10 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          className={`flex items-center justify-center gap-4 mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
             }`}
         >
-          <div className="w-16 h-px bg-[var(--color-golden)] opacity-50" />
+          <div className="w-20 h-px bg-[var(--color-golden)] opacity-50" />
           <div className="w-3 h-3 border border-[var(--color-golden)] rotate-45 opacity-50" />
-          <div className="w-16 h-px bg-[var(--color-golden)] opacity-50" />
+          <div className="w-20 h-px bg-[var(--color-golden)] opacity-50" />
         </div>
 
         <h2
-          className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-tight transition-all duration-1000 ${isVisible
+          className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-10 leading-tight transition-all duration-1000 ${isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
             }`}
@@ -57,6 +67,7 @@ export default function IntroSection() {
             fontFamily: "var(--font-inter)",
             fontWeight: 300,
             transitionDelay: "0.4s",
+            lineHeight: "1.9",
           }}
         >
           Grenoble is not just a city — it is a feeling. From the moment you
@@ -68,13 +79,13 @@ export default function IntroSection() {
 
         {/* Decorative bottom element */}
         <div
-          className={`flex items-center justify-center gap-4 mt-10 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          className={`flex items-center justify-center gap-4 mt-12 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
             }`}
           style={{ transitionDelay: "0.6s" }}
         >
-          <div className="w-16 h-px bg-[var(--color-golden)] opacity-50" />
+          <div className="w-20 h-px bg-[var(--color-golden)] opacity-50" />
           <div className="w-3 h-3 border border-[var(--color-golden)] rotate-45 opacity-50" />
-          <div className="w-16 h-px bg-[var(--color-golden)] opacity-50" />
+          <div className="w-20 h-px bg-[var(--color-golden)] opacity-50" />
         </div>
       </div>
     </section>
