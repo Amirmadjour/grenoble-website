@@ -8,6 +8,7 @@ const navItems = [
   { href: "#bastille", label: "Bastille" },
   { href: "#cycling", label: "Cycling" },
   { href: "#avenue", label: "Avenue" },
+  { href: "#story", label: "Story" },
 ];
 
 export default function Navbar() {
