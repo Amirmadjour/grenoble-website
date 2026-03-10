@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  basePath: "/grenoble-website",
-  assetPrefix: "/grenoble-website/",
+  basePath: isProd ? "/grenoble-website" : "",
+  assetPrefix: isProd ? "/grenoble-website/" : "",
   output: "export",
   images: {
     unoptimized: true,
@@ -11,3 +13,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
