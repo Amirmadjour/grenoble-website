@@ -259,7 +259,7 @@ export default function ScrollAnimation() {
       <div className="relative w-full h-screen flex flex-col items-center justify-center px-4 bg-[#f5f0e8] z-10">
         <h1
           ref={titleRef}
-          className="text-6xl md:text-9xl font-bold font-playfair text-black uppercase tracking-[8px] flex overflow-hidden py-4"
+          className="text-5xl md:text-9xl font-bold font-playfair text-black uppercase tracking-[8px] flex overflow-hidden py-4"
           style={{ perspective: "400px" }}
         >
           {"GRENOBLE".split("").map((char, index) => (
@@ -268,7 +268,7 @@ export default function ScrollAnimation() {
         </h1>
         <p
           ref={descRef}
-          className="mt-6 text-xl md:text-2xl font-inter text-black max-w-3xl text-center"
+          className="mt-6 text-lg md:text-2xl font-inter text-black max-w-3xl text-center"
         >
           And what makes it special
         </p>
@@ -285,10 +285,10 @@ export default function ScrollAnimation() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-x-0 top-[15vh] flex flex-col items-center justify-start text-black pointer-events-none drop-shadow-lg">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
                 The Longest Avenue
               </h1>
-              <p className="text-xl md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
+              <p className="text-lg md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
                 Scroll to ride down the longest straight avenue in France.
               </p>
             </div>
@@ -307,10 +307,10 @@ export default function ScrollAnimation() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-black pointer-events-none drop-shadow-lg">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
                 Les Bulles
               </h1>
-              <p className="text-xl md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
+              <p className="text-lg md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
                 Floating gracefully towards the historic Bastille fortress.
               </p>
             </div>
@@ -329,10 +329,10 @@ export default function ScrollAnimation() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-x-0 top-[15vh] flex flex-col items-center justify-start text-black pointer-events-none drop-shadow-lg">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
                 Cycling Culture
               </h1>
-              <p className="text-xl md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
+              <p className="text-lg md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
                 A flat and inviting terrain perfect for everyday cycling.
               </p>
             </div>
@@ -352,10 +352,10 @@ export default function ScrollAnimation() {
             />
             {/* Section 4 standard title */}
             <div ref={capitalTitleRef} className="absolute inset-x-0 top-[15vh] flex flex-col items-center justify-start text-black pointer-events-none drop-shadow-lg transition-transform duration-75">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
                 Capital of the Alps
               </h1>
-              <p className="text-xl md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
+              <p className="text-lg md:text-2xl font-inter text-center max-w-2xl px-4 text-black">
                 Surrounded by awe-inspiring peaks on all sides.
               </p>
             </div>
@@ -363,12 +363,12 @@ export default function ScrollAnimation() {
             {/* The Quote that fades in at the very end */}
             <div 
               ref={endQuoteBgRef}
-              className="absolute inset-0 flex flex-col items-center justify-center gap-8 md:gap-16 bg-black/60 pointer-events-none drop-shadow-xl opacity-0"
+              className="absolute inset-0 flex flex-col items-center justify-center gap-8 md:gap-16 bg-black/60 pointer-events-none drop-shadow-xl opacity-0 px-4"
             >
-              <h1 ref={endQuoteTextRef} className="text-4xl md:text-7xl font-bold font-playfair text-center text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] opacity-0 transition-transform duration-75">
+              <h1 ref={endQuoteTextRef} className="text-3xl md:text-7xl font-bold font-playfair text-center text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] opacity-0 transition-transform duration-75">
                 "At the end of every street, <br/> a mountain."
               </h1>
-              <p ref={endQuoteAuthorRef} className="text-2xl md:text-4xl font-inter text-gray-300 italic opacity-0 transition-transform duration-75">
+              <p ref={endQuoteAuthorRef} className="text-xl md:text-4xl font-inter text-gray-300 italic opacity-0 transition-transform duration-75">
                 — Stendhal
               </p>
             </div>
