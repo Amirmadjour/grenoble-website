@@ -275,7 +275,7 @@ export default function ScrollAnimation() {
       </div>
 
       {/* SECTION 1: The Avenue */}
-      <div ref={containerRef1} className="relative w-full h-[500vh]">
+      <div ref={containerRef1} className="relative w-full h-[800vh] md:h-[500vh]">
         <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">
           <div ref={avenueWrapperRef} className="relative w-full h-full overflow-hidden flex items-center justify-center bg-[#f5f0e8]">
             <img
@@ -297,7 +297,7 @@ export default function ScrollAnimation() {
       </div>
 
       {/* SECTION 2: Les Bulles */}
-      <div ref={containerRef2} className="relative w-full h-[500vh]">
+      <div ref={containerRef2} className="relative w-full h-[800vh] md:h-[500vh]">
         <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center bg-[#f5f0e8]">
           <div ref={bulbbesWrapperRef} className="relative w-full h-full overflow-hidden flex items-center justify-center border-l-8 border-[#f5f0e8]">
             <img
@@ -306,7 +306,7 @@ export default function ScrollAnimation() {
               alt="Bastille Cable Car sequence"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-x-0 top-[15vh] flex flex-col items-center justify-start text-black pointer-events-none drop-shadow-lg">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-black pointer-events-none drop-shadow-lg">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-center text-black">
                 Les Bulles
               </h1>
@@ -319,7 +319,7 @@ export default function ScrollAnimation() {
       </div>
 
       {/* SECTION 3: Cycling */}
-      <div ref={containerRef3} className="relative w-full h-[500vh]">
+      <div ref={containerRef3} className="relative w-full h-[800vh] md:h-[500vh]">
         <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center bg-[#f5f0e8]">
           <div ref={cyclingWrapperRef} className="relative w-full h-full overflow-hidden flex items-center justify-center border-l-8 border-[#f5f0e8]">
             <img
@@ -341,7 +341,7 @@ export default function ScrollAnimation() {
       </div>
 
       {/* SECTION 4: Capital of Alpes */}
-      <div ref={containerRef4} className="relative w-full h-[500vh]">
+      <div ref={containerRef4} className="relative w-full h-[800vh] md:h-[500vh]">
         <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center bg-[#f5f0e8]">
           <div ref={capitalWrapperRef} className="relative w-full h-full overflow-hidden flex items-center justify-center border-l-8 border-[#f5f0e8]">
             <img
